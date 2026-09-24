@@ -1,0 +1,232 @@
+.wrapper {
+  min-height: 100vh;
+  background-color: #08070b;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f4f4f5;
+  padding: 2rem 1.5rem 4rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: #a855f7;
+}
+
+.content {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.imagesContainer {
+  flex-shrink: 0;
+  width: 280px;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.infoContainer {
+  flex: 1;
+}
+
+.movieTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
+
+.tagline {
+  font-style: italic;
+  color: #a1a1aa;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.ratingBadge, .runtimeBadge, .dateBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.overviewSection {
+  margin-bottom: 1.75rem;
+}
+
+.overviewTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #a855f7;
+}
+
+.overviewText {
+  line-height: 1.6;
+  color: #d4d4d8;
+  font-size: 0.95rem;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.detailLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #a1a1aa;
+}
+
+.detailValue {
+  color: #f4f4f5;
+}
+
+.sectionContainer {
+  margin-top: 3rem;
+}
+
+.sectionTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+
+.castCarousel {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 85, 247, 0.4) transparent;
+}
+
+.castCard {
+  flex: 0 0 130px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.castImage {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.castName {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.castCharacter {
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trailerWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.trailerIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.loadingText {
+  text-align: center;
+  color: #a855f7;
+  padding: 5rem 0;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagesContainer {
+    width: 200px;
+  }
+
+  .movieTitle {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+
+  .badges {
+    justify-content: center;
+  }
+}

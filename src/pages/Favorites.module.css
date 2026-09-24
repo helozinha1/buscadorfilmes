@@ -1,0 +1,59 @@
+/* Favorites.module.css */
+
+/* Container Principal */
+.favoritesPage {
+  min-height: calc(100vh - 80px);
+  background-color: #08070b;
+  background-image: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(120, 40, 200, 0.25),
+    transparent
+  );
+  color: #f4f4f5;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+/* Título */
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.2rem;
+  background: #a855f7;
+  border-radius: 4px;
+  box-shadow: 0 0 8px #a855f7;
+}
+
+/* Estado Sem Favoritos */
+.emptyText {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #a1a1aa;
+  padding: 3.5rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(168, 85, 247, 0.25);
+  border-radius: 12px;
+  max-width: 480px;
+  margin: 3rem auto;
+  backdrop-filter: blur(8px);
+}
+
+/* Grid de Filmes (Mesmo tamanho da Home) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 2rem 1.5rem;
+}

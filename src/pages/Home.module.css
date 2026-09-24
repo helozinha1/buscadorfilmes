@@ -1,0 +1,250 @@
+.homePage {
+  min-height: 100vh;
+  background-color: #08070b;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 40, 200, 0.25), transparent);
+  color: #f4f4f5;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+.topActionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.tabsContainer {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding: 0.25rem;
+  margin-bottom: 0;
+  scrollbar-width: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.tabsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.tabBtn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #a1a1aa;
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  backdrop-filter: blur(12px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tabBtn:hover {
+  color: #ffffff;
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.tabBtn.active {
+  background: #7e22ce;
+  color: #ffffff;
+  border-color: #a855f7;
+  box-shadow: 0 0 12px rgba(126, 34, 206, 0.5);
+  font-weight: 600;
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  color: #a1a1aa;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 2.2rem 0.5rem 2.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.searchInput:focus {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.08);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.3);
+}
+
+.clearSearchBtn {
+  position: absolute;
+  right: 12px;
+  color: #a1a1aa;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.clearSearchBtn:hover {
+  color: #ffffff;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.2rem;
+  background: #a855f7;
+  border-radius: 4px;
+  box-shadow: 0 0 8px #a855f7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.loadingText {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #a855f7;
+  padding: 2rem 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.emptyText {
+  text-align: center;
+  color: #a1a1aa;
+  padding: 4rem 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .topActionsContainer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .searchContainer {
+    max-width: 100%;
+  }
+}
+/* Barra de Filtros */
+.filtersBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.75rem 1.25rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(12px);
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterIcon {
+  color: #a855f7;
+}
+
+.filterLabel {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+/* Seletores e Input de Ano */
+.filterSelect,
+.filterInput {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  outline: none;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.filterSelect:focus,
+.filterInput:focus {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.12);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+.filterSelect option {
+  background-color: #0d0b14;
+  color: #ffffff;
+}
+
+.filterInput {
+  width: 80px;
+  text-align: center;
+}
+
+/* Botão Limpar Filtros */
+.resetFiltersBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #a1a1aa;
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: auto;
+  backdrop-filter: blur(12px);
+  transition: all 0.2s ease;
+}
+
+.resetFiltersBtn:hover {
+  color: #ffffff;
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+}
